@@ -33,6 +33,7 @@ _(loosely in this order...)_
 * [x] migrate code
 * [x] migrate tests
 * [x] get tests passing with 100% parity
+* [x] add Grunfile
 * [ ] coverage reports
 * [ ] API documentation, written as code comments
 * [ ] Add the event to the changelogs of both libraries
