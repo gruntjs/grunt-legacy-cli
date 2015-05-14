@@ -1,13 +1,13 @@
 /*!
- * grunt-legacy-config <https://github.com/gruntjs/grunt-legacy-config>
+ * grunt <http://gruntjs.com/>
  *
- * Copyright (c) 2015 "Cowboy" Ben Alman.
+ * Copyright (c) 2013-2015 "Cowboy" Ben Alman.
  * Licensed under the MIT license.
  */
 
 'use strict';
 
-/* deps:mocha */
+/* deps: mocha */
 var assert = require('assert');
 var grunt = require('grunt');
 
@@ -19,7 +19,6 @@ function getOptionValues(str) {
 }
 
 describe('cli', function () {
-
   it('--debug taskname', function(done) {
     grunt.util.spawn({
       grunt: true,
@@ -29,6 +28,7 @@ describe('cli', function () {
       done();
     });
   });
+
   it('taskname --debug', function(done) {
     grunt.util.spawn({
       grunt: true,
@@ -38,6 +38,7 @@ describe('cli', function () {
       done();
     });
   });
+
   it('--debug --verbose', function(done) {
     grunt.util.spawn({
       grunt: true,
@@ -47,6 +48,7 @@ describe('cli', function () {
       done();
     });
   });
+
   it('--verbose --debug', function(done) {
     grunt.util.spawn({
       grunt: true,
