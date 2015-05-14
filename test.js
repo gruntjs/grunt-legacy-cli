@@ -18,45 +18,42 @@ function getOptionValues(str) {
   return matches ? JSON.parse(matches[1]) : {};
 }
 
-exports['cli'] = {
-  '--debug taskname': function(test) {
-    test.expect(1);
+describe('cli', function () {
+
+  it('--debug taskname', function(done) {
     grunt.util.spawn({
       grunt: true,
       args: ['--gruntfile', 'test/fixtures/Gruntfile-cli.js', '--debug', 'debug', 'finalize'],
     }, function(err, result) {
-      test.deepEqual(getOptionValues(result.stdout), {debug: 1}, 'Options should parse correctly.');
-      test.done();
+      assert.deepEqual(getOptionValues(result.stdout), {debug: 1}, 'Options should parse correctly.');
+      done();
     });
-  },
-  'taskname --debug': function(test) {
-    test.expect(1);
+  });
+  it('taskname --debug', function(done) {
     grunt.util.spawn({
       grunt: true,
       args: ['--gruntfile', 'test/fixtures/Gruntfile-cli.js', 'debug', '--debug', 'finalize'],
     }, function(err, result) {
-      test.deepEqual(getOptionValues(result.stdout), {debug: 1}, 'Options should parse correctly.');
-      test.done();
+      assert.deepEqual(getOptionValues(result.stdout), {debug: 1}, 'Options should parse correctly.');
+      done();
     });
-  },
-  '--debug --verbose': function(test) {
-    test.expect(1);
+  });
+  it('--debug --verbose', function(done) {
     grunt.util.spawn({
       grunt: true,
       args: ['--gruntfile', 'test/fixtures/Gruntfile-cli.js', '--debug', '--verbose', 'debug', 'verbose', 'finalize'],
     }, function(err, result) {
-      test.deepEqual(getOptionValues(result.stdout), {debug: 1, verbose: true}, 'Options should parse correctly.');
-      test.done();
+      assert.deepEqual(getOptionValues(result.stdout), {debug: 1, verbose: true}, 'Options should parse correctly.');
+      done();
     });
-  },
-  '--verbose --debug': function(test) {
-    test.expect(1);
+  });
+  it('--verbose --debug', function(done) {
     grunt.util.spawn({
       grunt: true,
       args: ['--gruntfile', 'test/fixtures/Gruntfile-cli.js', '--verbose', '--debug', 'debug', 'verbose', 'finalize'],
     }, function(err, result) {
-      test.deepEqual(getOptionValues(result.stdout), {debug: 1, verbose: true}, 'Options should parse correctly.');
-      test.done();
+      assert.deepEqual(getOptionValues(result.stdout), {debug: 1, verbose: true}, 'Options should parse correctly.');
+      done();
     });
-  },
-};
+  });
+});
