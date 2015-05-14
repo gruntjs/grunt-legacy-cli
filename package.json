@@ -7,10 +7,7 @@
     "name": "\"Cowboy\" Ben Alman",
     "url": "http://benalman.com/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/gruntjs/grunt-legacy-cli.git"
-  },
+  "repository": "gruntjs/grunt-legacy-cli",
   "bugs": {
     "url": "https://github.com/gruntjs/grunt-legacy-cli/issues"
   },
@@ -29,6 +26,7 @@
     "test": "mocha"
   },
   "keywords": [
+    "grunt-legacy",
     "cli",
     "grunt"
   ],

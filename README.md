@@ -42,6 +42,8 @@ _(loosely in this order...)_
 
 * [ ] replace core `grunt.cli` internal module with `grunt-legacy-cli`
 * [ ] remove any dependencies that are no longer needed from grunt.
+* [ ] enable travis
+* [ ] add travis badge
 
 ## Related projects
 
