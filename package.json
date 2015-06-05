@@ -11,10 +11,7 @@
   "bugs": {
     "url": "https://github.com/gruntjs/grunt-legacy-cli/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/gruntjs/grunt-legacy-cli/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js"
   ],

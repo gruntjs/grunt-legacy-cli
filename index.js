@@ -16,7 +16,7 @@ var path = require('path');
 var nopt = require('nopt');
 
 // This is only executed when run via command line.
-var cli = module.exports = function(options, done) {
+var cli = function(options, done) {
   // CLI-parsed options override any passed-in "default" options.
   if (options) {
     // For each default option...
@@ -44,8 +44,7 @@ var optlist = cli.optlist = {
     type: Boolean
   },
   base: {
-    info: 'Specify an alternate base path. By default, all file paths are relative to the Gruntfile. ' +
-          '(grunt.file.setBase) *',
+    info: 'Specify an alternate base path. By default, all file paths are relative to the Gruntfile. (grunt.file.setBase) *',
     type: path
   },
   color: {
@@ -54,8 +53,7 @@ var optlist = cli.optlist = {
     negate: true
   },
   gruntfile: {
-    info: 'Specify an alternate Gruntfile. By default, grunt looks in the current or parent directories ' +
-          'for the nearest Gruntfile.js or Gruntfile.coffee file.',
+    info: 'Specify an alternate Gruntfile. By default, grunt looks in the current or parent directories for the nearest Gruntfile.js or Gruntfile.coffee file.',
     type: path
   },
   debug: {
@@ -126,3 +124,9 @@ Object.keys(optlist).forEach(function(key) {
     cli.options[key] = [];
   }
 });
+
+/**
+ * Expose `cli`
+ */
+
+module.exports = cli;
