@@ -50,6 +50,12 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 + [github/cowboy](https://github.com/cowboy)
 * [twitter/cowboy](http://twitter.com/cowboy)
 
+## Release history
+
+**DATE**       **VERSION**   **CHANGES**
+
+* 2015-05-14   v0.1.0        first commit
+
 ## License
 
 Copyright © 2015 "Cowboy" Ben Alman
